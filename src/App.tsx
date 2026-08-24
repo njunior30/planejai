@@ -1,9 +1,13 @@
+import { RouterProvider } from "react-router-dom"
+
+import { ThemeProvider } from "./context/theme/ThemeProvider"
+import { router } from "./router"
 
 function App() {
-  return (
-    <>
-     <h1>Hello, Vite!</h1>
-    </>
+  return ( 
+    <ThemeProvider>
+    <RouterProvider router={router} />
+  </ThemeProvider>
   )
 }
 
